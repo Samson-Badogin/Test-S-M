@@ -1,6 +1,20 @@
 <html> 
 <title>S&M reqest form</title>
-<head></head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="Style_RF.css">
+</head>
 <body>
+	<h1>
+	Request Form
+	</h1>
+		<form method="POST" action="action.php">
+		<input name="name" type="text" placeholder="Введите Ваши ФИО" class="name" required>
+		<input name="email" type="email" placeholder="Введите e-mail" class="email" required>
+		<textarea raws="4" cals="40" name="message" type="text" placeholder="Оставьте Ваше сообщение:" class="message" required>
+		</textarea>
+		<input type="submit" value="Отправить" class="button">
+		</form>
 </body>
 </html>
