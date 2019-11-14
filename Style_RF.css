@@ -43,6 +43,9 @@ margin-bottom: 30px;
 display: block;
 overflow: hidden;
 }
+.out{
+
+}
 .message:focus,
 .name:focus{
 outline: none;
