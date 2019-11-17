@@ -4,17 +4,20 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="Style_RF.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="magic.js"></script>
 </head>
 <body>
 	<h1>
 	Request Form
 	</h1>
-		<form method="POST" action="action.php">
+		<form method="POST" id="ajax_form" action="action2.php"> //знаю, что php action тут не надо,но до ajax я не добрался.
 		<input name="name" type="text" placeholder="Введите Ваши ФИО" class="name" required>
 		<input name="email" type="email" placeholder="Введите e-mail" class="email" required>
 		<textarea raws="4" cals="40" name="message" type="text" placeholder="Оставьте Ваше сообщение:" class="message" required>
 		</textarea>
-		<input type="submit" value="Отправить" class="button">
+		<input type="submit" id="btn" value="Отправить" class="button"> //CSS для кнопки не стал делать
 		</form>
+		<div id="result_form">></div> //здесь будет вывод ajax
 </body>
 </html>
