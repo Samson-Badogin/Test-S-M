@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <form method="post" id="ajax_form" action="insert.php" >
-        <input type="text" name="name" placeholder="NAME" /><br>
+    <form method="post" id="ajax_form" action="" >
+        <input type="text" name="namo" placeholder="NAME" /><br>
         <input type="text" name="phonenumber" placeholder="YOUR PHONE" /><br>
         <input type="button" id="btn" value="Отправить" />
     </form>

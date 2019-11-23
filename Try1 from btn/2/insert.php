@@ -1,17 +1,5 @@
 <?php
-
-if (isset($_POST["name"]) && isset($_POST["phonenumber"]) ) { 
-
-	// Формируем массив для JSON ответа
-    $result = array(
-    	'name' => $_POST["name"],
-    	'phonenumber' => $_POST["phonenumber"]
-    ); 
-
-    // Переводим массив в JSON
-    echo json_encode($result)'; 
-}
-$host = 'localhost';
+	/*$host = 'localhost';
          $db = 'requestform';
          $user = 'root';
          $pswd = '';
@@ -30,7 +18,8 @@ $host = 'localhost';
         			}
               else {
                 echo 'Подключение к БД успешно';
-       			}
+       			}*/
+require_once("db_connect.php");
 	
 	$name = $_POST['name'];
 	echo ($name);
@@ -41,5 +30,4 @@ $result = "INSERT INTO Test1 (name) VALUES (:name)";
 $stmt= $pdo->prepare($result);
 $stmt->execute($data);
 	
-		mysql_close($pdo);
 ?>
