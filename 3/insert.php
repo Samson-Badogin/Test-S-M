@@ -1,8 +1,5 @@
 <?php
-
- /*TRY TO CONNECT TO DATA BASE*/
-
-         $host = 'localhost';
+	/*$host = 'localhost';
          $db = 'requestform';
          $user = 'root';
          $pswd = '';
@@ -15,11 +12,22 @@
                 ];
 
         $pdo = new PDO($conn, $user, $pswd, $opt);
-                if($pdo == false){
+              if($pdo == false){
                 echo 'Проблемы с соединением';
                 exit();
-        }
-                else{
+        			}
+              else {
                 echo 'Подключение к БД успешно';
-        }
+       			}
+	
+	$name = $_POST['name'];
+	echo ($name);
+ 			$data = [
+ 				   'name' => $name,
+   		];
+$result = "INSERT INTO Test1 (name) VALUES (:name)";
+$stmt= $pdo->prepare($result);
+$stmt->execute($data);
+	
+		mysql_close($pdo);*/
 ?>

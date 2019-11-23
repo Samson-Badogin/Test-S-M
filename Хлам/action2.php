@@ -33,7 +33,7 @@ $message = $_POST['message'];
  echo ($message);
 
 //TRY TO RECORD POST DATA IN requestform db
-$result = query("INSERT INTO requestform (name, email, message) 
+$result = mysql_query("INSERT INTO requestform (name, email, message) 
 							VALUES ('$name', '$email', '$message')");
 /*$result = query("INSERT INTO requestform (name, email, message) 
 							VALUES ('$_POST['name']','$_POST['email']','$_POST['message']')");*/

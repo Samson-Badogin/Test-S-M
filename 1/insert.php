@@ -1,5 +1,5 @@
 <?php
-	$host = 'localhost';
+	/*$host = 'localhost';
          $db = 'requestform';
          $user = 'root';
          $pswd = '';
@@ -18,7 +18,8 @@
         			}
               else {
                 echo 'Подключение к БД успешно';
-       			}
+       			}*/
+require_once("db_connect.php");
 	
 	$name = $_POST['name'];
 	echo ($name);
@@ -29,5 +30,4 @@ $result = "INSERT INTO Test1 (name) VALUES (:name)";
 $stmt= $pdo->prepare($result);
 $stmt->execute($data);
 	
-		mysql_close($pdo);
 ?>
